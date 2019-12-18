@@ -37,13 +37,22 @@
 
 (let*
     ((space/bg "#111")
+     (space/comment "#969896")
+     (space/dir "#9f621d")
      (space/fg "#eee")
      (space/hl "#333"))
 
   (custom-theme-set-faces
    `space
    `(default ((t (:foreground ,space/fg :background ,space/bg))))
-   
+
+
+   ;; dired
+   `(dired-directory ((t (:foreground ,space/dir))))
+
+   ;;comment
+   `(font-lock-comment-face (( t(:foreground ,space/comment :slant italic))))
+
    ;;; no syntax highlight
    `(font-lock-builtin-face		((t (:foreground ,space/fg))))
    `(font-lock-function-name-face	((t (:foreground ,space/fg))))
