@@ -50,9 +50,6 @@
    ;; dired
    `(dired-directory ((t (:foreground ,space/dir))))
 
-   ;;comment
-   `(font-lock-comment-face (( t(:foreground ,space/comment :slant italic))))
-
    ;;; no syntax highlight
    `(font-lock-builtin-face		((t (:foreground ,space/fg))))
    `(font-lock-function-name-face	((t (:foreground ,space/fg))))
@@ -61,6 +58,23 @@
    `(font-lock-type-face		((t (:foreground ,space/fg))))
    `(font-lock-constant-face		((t (:foreground ,space/fg))))
    `(font-lock-variable-name-face	((t (:foreground ,space/fg))))
+
+   ;; except for strings and comments
+   `(font-lock-comment-face		((t (:foreground ,space/comment))))
+   `(font-lock-comment-delimiter-face	((t (:foreground ,space/comment))))
+   `(font-lock-doc-string-face ((t (:foreground ,space/comment))))
+   `(font-lock-doc-face ((t (:foreground ,space/comment))))
+   `(font-lock-preprocessor-face ((t (:foreground ,space/comment))))
+   `(font-lock-regexp-grouping-construct ((t (:foreground ,space/comment))))
+
+   ;; php
+   `(php-doc-annotation-tag ((t (:foreground ,space/comment))))
+   `(php-doc-class-name ((t (:foreground ,space/comment))))
+   `(php-doc-$this-sigil ((t (:foreground ,space/comment))))
+   `(php-doc-variable-sigil ((t (:foreground ,space/comment))))
+   `(php-doc-$this ((t (:foreground ,space/comment))))
+   `(php-type ((t (:foreground ,space/comment))))
+   `(php-annotations-annotation-face ((t (:foreground ,space/comment))))
 
    ;; change default
    `(hl-line ((t (:background ,space/hl))))
